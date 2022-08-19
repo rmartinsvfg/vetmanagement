@@ -1,0 +1,9 @@
+<main class="container">
+  <%= link_to sanitize("&larr; Back to pet"), pet_path(@pet) %>
+
+  <div class="header">
+    <h1>Edit pet</h1>
+  </div>
+
+  <%= render "form", pet: @pet %>
+</main>

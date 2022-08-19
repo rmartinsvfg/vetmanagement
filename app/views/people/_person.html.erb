@@ -1,0 +1,13 @@
+<div class="person">
+  <%= link_to person.name, people_path(person) %>
+  <div class="person__actions">
+    <%= button_to "Delete",
+                  person_path(person),
+                  method: :delete,
+                  class: "btn btn--light" %>
+    <%= link_to "Edit",
+                edit_person_path(person),
+                class: "btn btn--light" %>
+  </div>
+  <br>
+</div>

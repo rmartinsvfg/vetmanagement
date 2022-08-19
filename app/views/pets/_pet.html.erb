@@ -1,0 +1,13 @@
+<div class="pet">
+  <%= link_to pet.name, pet_path(pet) %>
+  <div class="pet__actions">
+    <%= button_to "Delete",
+                  pet_path(pet),
+                  method: :delete,
+                  class: "btn btn--light" %>
+    <%= link_to "Edit",
+                edit_pet_path(pet),
+                class: "btn btn--light" %>
+  </div>
+  <br>
+</div>

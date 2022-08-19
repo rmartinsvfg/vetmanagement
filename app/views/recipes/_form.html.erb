@@ -1,0 +1,16 @@
+<%= simple_form_for recipe, html: { class: "recipe form" } do |f| %>
+    <% if recipe.errors.any? %>
+      <div class="error-message">
+        <%= recipe.errors.full_messages.to_sentence.capitalize %>
+      </div>
+    <% end %>
+  
+    <%= f.input :subject, input_html: { autofocus: true } %>
+    <%= f.label :indications %><br />
+    <%= f.text_area :indications, input_html: { autofocus: true } %>
+      <div class="field">
+        <%= f.label :pet %><br />
+        <%= f.collection_select(:pet_id, Pet.all, :id, :name, :include_blank => "Please select a pet...") %>
+        </div>
+    <%= f.submit class: "btn btn--secondary" %>
+  <% end %>

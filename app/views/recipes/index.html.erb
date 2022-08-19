@@ -1,0 +1,10 @@
+<main class="container">
+  <div class="header">
+    <h1>Medical Prescription</h1>
+    <%= link_to "New Medical prescriptions",
+                new_recipe_path,
+                class: "btn btn--primary" %>
+  </div>
+
+  <%= render @recipes %>
+</main>

@@ -1,0 +1,9 @@
+<main class="container">
+  <%= link_to sanitize("&larr; Back to person"), person_path(@person) %>
+
+  <div class="header">
+    <h1>Edit person</h1>
+  </div>
+
+  <%= render "form", person: @person %>
+</main>

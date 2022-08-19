@@ -1,0 +1,19 @@
+<%= javascript_pack_tag "application" %>
+
+
+<div>
+    <h2>Log In - Vet Management</h2>
+    <%= form_tag '/login' do %>
+        Username: <%= text_field_tag :username %><br>
+        Password: <%= password_field_tag :password %><br>
+        <%= submit_tag "Login" %>
+    <% end %>
+
+    <%= button_to "Create Account", '/users', method: :get %>
+    <%= button_to "Pets", '/pets', method: :get %>
+    <%= button_to "Medical Prescriptions", '/recipes', method: :get %>
+    <%= button_to "People", '/people', method: :get %>
+
+
+
+</div>

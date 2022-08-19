@@ -1,0 +1,14 @@
+<main class="container">
+  <%= link_to sanitize("&larr; Back to person"), people_path %>
+  <div class="header">
+    <h1>
+      <%= @person.name %>
+    </h1>
+    <h3>
+    <%= @person.age %>
+    <br>
+    <%= @person.doc %>
+    </h3>
+
+  </div>
+</main>

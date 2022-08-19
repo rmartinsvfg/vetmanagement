@@ -1,0 +1,17 @@
+en:
+  simple_form:
+    placeholders:
+      pet:
+        name: Name of your pet
+        adress: Adress of your pet
+        age: Age in months
+        pedigree: Pedigree of your pet
+    labels:
+      pet:
+        name: Name
+
+  helpers:
+    submit:
+      quote:
+        create: Create pet
+        update: Update pet

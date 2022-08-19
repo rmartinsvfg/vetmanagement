@@ -1,0 +1,17 @@
+<%= simple_form_for pet, html: { class: "pet form" } do |f| %>
+    <% if pet.errors.any? %>
+      <div class="error-message">
+        <%= pet.errors.full_messages.to_sentence.capitalize %>
+      </div>
+    <% end %>
+  
+    <%= f.input :name, input_html: { autofocus: true } %>
+    <%= f.input :age, input_html: { autofocus: true } %>
+    <%= f.input :adress, input_html: { autofocus: true } %>
+    <%= f.input :pedigree, input_html: { autofocus: true } %>
+      <div class="field">
+        <%= f.label :person %><br />
+        <%= f.collection_select(:person_id, Person.all, :id, :name, :include_blank => "Please select a person...") %>
+        </div>
+    <%= f.submit class: "btn btn--secondary" %>
+  <% end %>
